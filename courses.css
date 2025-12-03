@@ -1,0 +1,272 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*  Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #333;
+
+  background-image: url('beautiful\ tree\ image.jpeg'); /* your image file */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  padding: 10px 40px;
+  position: relative;
+}
+
+/*  Header */
+ header {
+  background-color:#3632a8;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-bottom:5px solid #3632a8;
+}
+
+.header-flex h1 {
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 32px;
+    margin: 0;
+}
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between logo and title */
+}
+
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* optional circular logo */
+  object-fit: cover;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #00aaff;
+}
+
+.details-box summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+.details-box summary:hover {
+  text-decoration: underline;
+}
+
+.details-box p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+details {
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+
+.btn {
+    background-color: #00aaff;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0088cc;
+}
+
+/* Courses Section */
+.course-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.course-container {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20px 40px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.course-card {
+    opacity: 0;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transition */
+    animation: fadeInUp 1s ease forwards; /* Animation */
+}
+/* Hover Effect */
+.course-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.course-card h3 {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.course-card p {
+    flex-grow: 1;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.read-btn {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.4s ease, transform 0.3s ease; /* Button transition */
+}
+
+.read-btn:hover {
+    background-color: #0088cc;
+    transform: scale(1.1);
+}
+
+/* ----------- Animation ------------- */
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    margin-top: 250px;
+}
+
+/* ------------------------------
+   Responsive Design (Mobile)
+--------------------------------*/
+@media (max-width: 768px) {
+
+    /* Navbar */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    /* Course Cards Adjust */
+    .course-container {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .course-card {
+        width: 90%;   /* Full width for mobile */
+    }
+
+    .course-card h3 {
+        font-size: 20px;
+    }
+
+    .course-card p {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+
