@@ -1,0 +1,220 @@
+/*global styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #333;
+}
+/* --------------------for background ---------------------*/
+.grades-bg {
+  background-image: url('website\ background\ image.jpg'); /* your image file */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/*           HEADER                 */
+ .header-flex {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  padding: 15px 40px;
+  background: #222;
+  color: white;
+}
+
+/*  Header */
+ header {
+  background-color:#3632a8;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-bottom:5px solid #01210a;
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between logo and title */
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* optional circular logo */
+  object-fit: cover;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/*  Navigation Bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: orange;
+}
+
+/*-----------------MAIN CONTENT---------------------*/
+.grades-section {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2)
+}
+
+/*-----------------TABLE------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse; /* removes double borders */
+  text-align: left;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in;
+}
+
+caption {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+}
+
+thead {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 17px;
+}
+
+footer{
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 250px;
+}
+
+/* ----------- ANIMATION ----------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ------------------ RESPONSIVE DESIGN ------------------ */
+
+/* Tablets and small laptops */
+@media (max-width: 992px) {
+  .header-flex {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .grades-section {
+    width: 90%;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  th, td {
+    padding: 12px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .header-flex {
+    padding: 20px 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  caption {
+    font-size: 22px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  caption {
+    font-size: 20px;
+  }
+}
+
+

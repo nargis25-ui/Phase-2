@@ -1,0 +1,206 @@
+/* THIS IS MY FEEDBACK PAGE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ensures full screen height */
+}
+  
+.feedback-bg{
+  background-image: url('beautiful\ image\ of\ shinchen.jpg'); /* your image file */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background: linear-gradient(135deg, #1c4cb0, #1e3261);
+  min-height: 100vh;
+  color: white;
+}
+
+ /*  Header */
+.header-flex {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  padding: 10px 40px;
+  background-color:#42e9f5;
+  color: white;
+  border-bottom:5px solid #42e9f5;
+  flex-shrink: 0;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/*Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between logo and title */
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* optional circular logo */
+  object-fit: cover;
+}
+
+/* Navigation Bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 17px;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00d6ff;
+}
+
+/* ------------------feedback form section--------------------*/
+
+.feedback-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(6px);
+  animation: fadeIn 1.2s ease;
+}
+
+.feedback-section h2 {
+  color: #004d66;
+  margin-bottom: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/*-------------------form styling--------------------*/
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 15px;
+}
+
+.feedback-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.feedback-section p {
+  color: #cfd8ff;
+  margin-bottom: 25px;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  transition: 0.3s ease-in-out;
+}
+
+/*--------------Input focus Animation-----------------*/
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #004d66;
+  box-shadow: 0 0 5px rgba(0, 77, 102, 0.5);
+  transform: scale(1.02);
+}
+
+/*-------------------BUTTON--------------------*/
+.main-btn {
+  flex: 1; /* takes up remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  background: #00b3ff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+/*---------------------BUTTON HOVER Animation---------------------*/
+.main-btn:hover {
+  background: #0088c4;
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 15px rgba(0, 220, 255, 0.6);
+}
+
+/*-------------------Footer--------------------*/
+ footer {
+  flex-shrink: 0;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+/* -------------------- ANIMATION ---------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- RESPONSIVE ---------------------- */
+@media (max-width: 650px) {
+  .feedback-section {
+    width: 90%;
+    padding: 25px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+

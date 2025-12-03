@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit feedback</title>
+    <LINK rel="stylesheet" href="style.css">
+</head>
+
+<!-------------HERE IS MY FEEDBACK FORM--------------->
+
+<body class="feedback-bg">
+  <header class="header-flex">
+    <div class="logo-container">
+      <img src="logo 2.png" alt="My Logo" class="logo">
+      <h1>My Website</h1>
+      </div>
+
+  </header>
+
+  <main>
+    <section class="feedback-section">
+      <h2>We'd Love Your Feedback!</h2>
+      <p>Please fill out the form below and share your thoughts with us.</p>
+
+  <form class="feedback-form" action="#">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+
+     <div class="rating-row">
+     <label><input type="radio" name="rating" value="good"> Good</label>
+
+     <label><input type="radio" name="rating" value="average"> Average</label>
+     
+     <label><input type="radio" name="rating" value="bad"> Bad</label>
+     </div>
+
+     
+    <label for="telephone">Telephone:</label>
+    <input type="tel" id="telephone" name="telephone" placeholder="Enter your telephone number" required>
+
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" placeholder="Enter your state name" required>
+
+    <label for="message">Your Feedback:</label>
+    <textarea id="message" name="message" rows="5" placeholder="Write your comment here..." required></textarea>
+
+    <button type="submit" class="main-btn">Submit Feedback</button>
+  </form>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Student Portal. All rights reserved.</p>
+  </footer>
+</html>
+</body>

@@ -1,0 +1,107 @@
+/*-----my first online resume using html and css-----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container{
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Top Section */
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Left Info */
+.left h1{
+    font-size: 32px;
+}
+
+/* Right Image */
+.Profile-img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+/* Section Titles */
+.title{
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Table fixed width */
+.details {
+    width: 100%;
+    padding: 5px 10px;
+    border-collapse: collapse;
+}
+
+.title:hover{
+    background-color:#05edda;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*      RESPONSIVE       */
+
+@media (max-width: 768px){
+    .container{
+        width: 95%;
+        padding: 10px;
+    }
+
+    /* Top section becomes vertical on mobile */
+    .top{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left h1{
+        font-size: 26px;
+    }
+
+    .Profile-img{
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px){
+    .left p{
+        font-size: 14px;
+    }
+
+    .title{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    ul li{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .details td{
+        font-size: 14px;
+    }
+}

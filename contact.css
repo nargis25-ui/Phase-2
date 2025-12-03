@@ -1,0 +1,230 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    font-size: 16px;
+    background-image: url("beautiful\ image\ of\ shinchen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    animation: fadePage 1s ease-in;
+}
+
+/* Soft white overlay */
+body::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color:; 
+  z-index: 0;
+}
+
+/* Header */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #3c2dd4;
+    color: white;
+    position: relative;
+    animation: slideDown 1s ease;  /* Animation */
+}
+
+.header-title {
+    position: static;
+    left: 45%;
+    transform: none;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/*  Logo Styling */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between logo and title */
+  width: 80px;
+  animation: logoPop 0.8s ease-out;  /* Logo Animation */
+}
+
+.logo-section img {
+    padding: 8px;
+    width: 70px;
+    height:70px;
+    border-radius: 50%; /* optional circular logo */
+    object-fit: cover;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ddff;
+}
+
+/* Contact Container */
+.contact-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    animation: fadeUp 1s ease;
+}
+
+.contact-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Box Section */
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Form */
+form {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: popIn 0.7s ease;
+}
+
+form label {
+    margin-top: 15px;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 10px rgba(0, 119, 255, 0.3);
+}
+
+/* Button */
+form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background: #0088cc;
+    transform: scale(1.05);
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 0.6;
+    min-width: 250px;
+    background:white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(189, 189, 189);
+    animation: slideRight 0.7s ease;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadePage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideRight {
+    from { transform: translateX(60px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .contact-box {
+        flex-direction: column;
+    }
+}

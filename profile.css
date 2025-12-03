@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* only hide horizontal scrollbar */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fa;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #222;
+
+  /*  Full-screen background image */
+  background-image: url('desktop-p-anime-girl.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Header */
+header {
+  background-color: #3271a8;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 5px solid #325da8;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  background-color: #325da8;
+  padding: 10px 40px;
+  position: relative;
+  color: white;
+  animation: fadeDown 1s ease;
+}
+
+/*  Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between logo and title */
+  animation: logoPop 0.8s ease ;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* optional circular logo */
+  object-fit: cover;
+  animation: logoPop 0.8s ease ;
+}
+
+
+/* H1 ko bilkul perfectly center me lane ka code */
+.header-flex h1 {
+    position: absolute;
+    left: 45%;
+    text-align: center;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 28px;
+    animation: fadeSLide 1s ease;
+    flex: 1;
+}
+
+/* Navigation Bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color:#00aaff;
+  transform: scale(1.1);
+}
+
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Profile Page Styles */
+.profile-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* let section expand if needed */
+  background: rgba(255, 255, 255, 0); /* transparent */
+  padding: 60px 20px;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.9); /* slight transparency */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width:100%;
+  max-width: 500px;
+  animation:fadeUp 1.3s ease-in-out;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #004d66;
+  margin-bottom: 15px;
+  animation:fadeIn 1s ease;
+}
+
+/* Name */
+.profile-card h2 {
+  margin-top: 15px;
+  font-size: 26px;
+  color: #001f3f;
+}
+
+main {
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio {
+  color: #555;
+  font-size: 1em;
+  margin: 10px 0 20px;
+  line-height: 1.6;
+}
+
+.profile-info {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.profile-info li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+/* Back Button */
+.main-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #0077b6;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  background: #005f8a;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 40px; /* spacing after content */
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes logoPop {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+   .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero h2 {
+    font-size: 1.5em;
+  }
+
+  .intro {
+    margin: 20px;
+    padding: 15px;
+  }
+}
+
