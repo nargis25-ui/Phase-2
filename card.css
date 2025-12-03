@@ -1,0 +1,273 @@
+.header-flex{
+    display:flex;
+    justify-content: center;   /* Horizontally center */
+    align-items: center;       /* Vertically center */
+    height: 60px;
+    margin: 10px;
+    background-color: #56f5f2;
+}
+
+.header-flex:hover {
+    background-color: #2fe4e0;   /* lighter or darker shade */
+    transition: 0.3s ease;       /* smooth hover effect */
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+}
+
+.header-flex h1:hover {
+    color: darkblue;
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+
+body{
+    text-align: center;
+    align-items: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*-----------------This is our 1 card-----------------*/
+.Product-card{
+    max-width: 320px;
+    background: #fff;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.Product-card img{
+    width: 95%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.product-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.product-description{
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+}
+
+.product-price{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a7f35;
+}
+
+.add-card-btn{
+    padding: 10px 20px;
+    background-color: #1a7f35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    transition: 0.3s ease;
+}
+
+.add-card-btn:hover{
+    background-color: #145d27;
+    transform:scale(1.05);
+}
+
+/*---------------This is our second card-----------------*/
+.Product-card-2{
+    max-width: 320px;
+    background: #fff;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.Product-card-2 img{
+    width: 70%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.product-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.product-description{
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+}
+
+.product-price{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a7f35;
+}
+
+.add-card-btn{
+    padding: 10px 20px;
+    background-color: #1a7f35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    transition: 0.3s ease;
+}
+
+.add-card-btn:hover{
+    background-color: #145d27;
+    transform:scale(1.05);
+}
+
+/*------------------This is our third card----------------*/
+.Product-card-3{
+    max-width: 320px;
+    background: #fff;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.Product-card-3 img{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.product-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.product-description{
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+}
+
+.product-price{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a7f35;
+}
+
+.add-card-btn{
+    padding: 10px 20px;
+    background-color: #1a7f35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    transition: 0.3s ease;
+}
+
+.add-card-btn:hover{
+    background-color: #145d27;
+    transform:scale(1.05);
+}
+
+/*---------------This is my fourth card -----------------*/
+.Product-card-4{
+    max-width: 320px;
+    background: #fff;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.Product-card-4 img{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.product-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.product-description{
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+}
+
+.product-price{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a7f35;
+}
+
+.add-card-btn{
+    padding: 10px 20px;
+    background-color: #1a7f35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    transition: 0.3s ease;
+}
+
+.add-card-btn:hover{
+    background-color: #145d27;
+    transform:scale(1.05);
+}
+
+footer {
+    display: flex;
+    justify-content: center;   /* horizontally center text */
+    align-items: center;       /* vertically center text */
+    background-color: black;
+    color: white;
+    height: 30px;              /* better height */
+    margin-top: 200px;
+    padding: 15px;
+}
+
+/*----------------This is our fourth card---------------*/
+
+@media(max-width:768px){
+    .Product-card{
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
